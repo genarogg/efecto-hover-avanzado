@@ -172,7 +172,23 @@
           }
         }
   
-    
+        &.box2 {
+          .background-hover {
+            background: linear-gradient(
+              to bottom,
+              rgba(#00d3d3, 1),
+              rgba(#0090ea, 1)
+            );
+            top: 170px;
+            left: -100px;
+          }
+          .icon > svg {
+            color: #0090ea;
+          }
+        }
+  
+     
+  
    
        
         
