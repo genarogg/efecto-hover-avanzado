@@ -217,7 +217,21 @@
           }
         }
   
-       
+        &.box5 {
+          .background-hover {
+            background: linear-gradient(
+              to bottom,
+              rgba(#dd0f0f, 1),
+              rgba(#ea003f, 1)
+            );
+            top: 180px;
+            left: 80px;
+          }
+          .icon > svg {
+            color: #ea003f;
+          }
+        }
+  
         
       }
     }
