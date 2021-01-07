@@ -232,7 +232,20 @@
           }
         }
   
-        
+        &.box6 {
+          .background-hover {
+            background: linear-gradient(
+              to bottom,
+              rgba(#e33a67, 1),
+              rgba(#ea003f, 1)
+            );
+            top: -100px;
+            left: -15px;
+          }
+          .icon > svg {
+            color: #5980d8;
+          }
+        }
       }
     }
   }
