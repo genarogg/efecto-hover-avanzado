@@ -1,252 +1,246 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-image: url(../img/background.webp);
-    background-color: #191337;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/background.webp);
+  background-color: #191337;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  min-height: 98.9vh;
+  background-position: center;
+  font-family: Lato, sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 100px;
+
+  .container-box {
     display: flex;
-    min-height: 98.9vh;
-    background-position: center;
-    font-family: Lato, sans-serif;
-  
-  }
-  
-  
-  
-  .container {
-    max-width: 1000px;
-    margin: auto;
-    margin-top: 100px;
-  
-    .container-box {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-  
-      a {
-        text-decoration: none;
-        color: #000;
-      }
-  
-      .box {
-        width: 250px;
-        height: 180px;
-        padding: 20px;
-        margin: 20px;
-        background-color: #fff;
-        text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .box {
+      width: 250px;
+      height: 180px;
+      padding: 20px;
+      margin: 20px;
+      background-color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 300ms;
+
+      .icon > svg,
+      h4,
+      p {
         position: relative;
-        overflow: hidden;
-        cursor: pointer;
+        z-index: 1;
         transition: all 300ms;
-  
-        .icon > svg,
-        h4,
-        p {
-          position: relative;
-          z-index: 1;
-          transition: all 300ms;
-        }
-  
-        .icon > svg {
-          color: rgb(106, 202, 138);
-          width: 40px;
-          height: 40px;
-          stroke-width: 0;
-          stroke: currentColor;
-          fill: currentColor;
-          transform: translateY(30px);
-        }
-  
-        h4,
-        p {
-          margin-top: 10px;
-        }
-  
-        h4 {
-          font-size: 30px;
-          transform: translateY(30px);
-        }
-  
-        p {
-          font-size: 14px;
-          transform: translateY(100px);
-          opacity: 0;
-        }
-  
+      }
+
+      .icon > svg {
+        color: rgb(106, 202, 138);
+        width: 40px;
+        height: 40px;
+        stroke-width: 0;
+        stroke: currentColor;
+        fill: currentColor;
+        transform: translateY(30px);
+      }
+
+      h4,
+      p {
+        margin-top: 10px;
+      }
+
+      h4 {
+        font-size: 30px;
+        transform: translateY(30px);
+      }
+
+      p {
+        font-size: 14px;
+        transform: translateY(100px);
+        opacity: 0;
+      }
+
+      .background-hover {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+
+        background-color: red;
+        border-radius: 100%;
+        transition: all 300ms;
+        z-index: -1;
+      }
+
+      &:hover {
+        box-shadow: -10px 10px 20px -10px rgba(#000, 0.5);
+        transform: translate(5px, -5px);
+
         .background-hover {
-          width: 100px;
-          height: 100px;
-          position: absolute;
-  
-          background-color: red;
-          border-radius: 100%;
+          width: 400px;
+          height: 400px;
           transition: all 300ms;
-          z-index: -1;
         }
-  
-        &:hover {
-          box-shadow: -10px 10px 20px -10px rgba(#000, 0.5);
-          transform: translate(5px, -5px);
-  
-          .background-hover {
-            width: 400px;
-            height: 400px;
-            transition: all 300ms;
-          }
-  
-          .icon > svg {
-            color: #fff !important;
-            font-size: 30px;
-            transform: translateY(0);
-          }
-  
-          h4 {
-            transform: translateY(0);
-            color: #fff;
-          }
-  
-          p {
-            transform: translateY(0);
-            opacity: 1;
-            color: #fff;
-          }
-  
-          
-  
-          &.box2 {
-            .background-hover {
-              top: -90px;
-              left: -90px;
-            }
-          }
-  
-          &.box3 {
-            .background-hover {
-              top: -90px;
-              left: -90px;
-            }
-          }
-  
-          &.box4 {
-            .background-hover {
-              top: -100px;
-      left: -80px;
-            }
-          }
-  
-          &.box5 {
-            .background-hover {
-              top: -100px;
-      left: -70px;
-            }
-          }
-  
-          &.box6 {
-            .background-hover {
-              top: -100px;
-              left: -70px;
-            }
-          }
+
+        .icon > svg {
+          color: #fff !important;
+          font-size: 30px;
+          transform: translateY(0);
         }
-  
-        &.box1 {
-          .background-hover {
-            background: linear-gradient(
-              to bottom,
-              rgba(#3dc315, 1),
-              rgba(#fdb42a, 1)
-            );
-            top: -100px;
-            left: -100px;
-          }
-          .icon > svg {
-            color: #3dc315;
-          }
+
+        h4 {
+          transform: translateY(0);
+          color: #fff;
         }
-  
+
+        p {
+          transform: translateY(0);
+          opacity: 1;
+          color: #fff;
+        }
+
         &.box2 {
           .background-hover {
-            background: linear-gradient(
-              to bottom,
-              rgba(#00d3d3, 1),
-              rgba(#0090ea, 1)
-            );
-            top: 170px;
-            left: -100px;
-          }
-          .icon > svg {
-            color: #0090ea;
+            top: -90px;
+            left: -90px;
           }
         }
-  
+
         &.box3 {
           .background-hover {
-            background: linear-gradient(
-              to bottom,
-              rgba(#d300cb, 1),
-              rgba(#9d00f0, 1)
-            );
-            top: 50px;
-            left: 252px;
-          }
-          .icon > svg {
-            color: #9d00f0;
+            top: -90px;
+            left: -90px;
           }
         }
-  
+
         &.box4 {
           .background-hover {
-            background: linear-gradient(
-              to bottom,
-              rgba(#dd0f0f, 1),
-              rgba(#ffa700, 1)
-            );
-            top: 172px;
+            top: -100px;
             left: -80px;
           }
-          .icon > svg {
-            color: #ffa700;
-          }
         }
-  
+
         &.box5 {
           .background-hover {
-            background: linear-gradient(
-              to bottom,
-              rgba(#dd0f0f, 1),
-              rgba(#ea003f, 1)
-            );
-            top: 180px;
-            left: 80px;
-          }
-          .icon > svg {
-            color: #ea003f;
+            top: -100px;
+            left: -70px;
           }
         }
-  
+
         &.box6 {
           .background-hover {
-            background: linear-gradient(
-              to bottom,
-              rgba(#e33a67, 1),
-              rgba(#ea003f, 1)
-            );
             top: -100px;
-            left: -15px;
+            left: -70px;
           }
-          .icon > svg {
-            color: #5980d8;
-          }
+        }
+      }
+
+      &.box1 {
+        .background-hover {
+          background: linear-gradient(
+            to bottom,
+            rgba(#3dc315, 1),
+            rgba(#fdb42a, 1)
+          );
+          top: -100px;
+          left: -100px;
+        }
+        .icon > svg {
+          color: #3dc315;
+        }
+      }
+
+      &.box2 {
+        .background-hover {
+          background: linear-gradient(
+            to bottom,
+            rgba(#00d3d3, 1),
+            rgba(#0090ea, 1)
+          );
+          top: 170px;
+          left: -100px;
+        }
+        .icon > svg {
+          color: #0090ea;
+        }
+      }
+
+      &.box3 {
+        .background-hover {
+          background: linear-gradient(
+            to bottom,
+            rgba(#d300cb, 1),
+            rgba(#9d00f0, 1)
+          );
+          top: 50px;
+          left: 252px;
+        }
+        .icon > svg {
+          color: #9d00f0;
+        }
+      }
+
+      &.box4 {
+        .background-hover {
+          background: linear-gradient(
+            to bottom,
+            rgba(#dd0f0f, 1),
+            rgba(#ffa700, 1)
+          );
+          top: 172px;
+          left: -80px;
+        }
+        .icon > svg {
+          color: #ffa700;
+        }
+      }
+
+      &.box5 {
+        .background-hover {
+          background: linear-gradient(
+            to bottom,
+            rgba(#dd0f0f, 1),
+            rgba(#ea003f, 1)
+          );
+          top: 180px;
+          left: 80px;
+        }
+        .icon > svg {
+          color: #ea003f;
+        }
+      }
+
+      &.box6 {
+        .background-hover {
+          background: linear-gradient(
+            to bottom,
+            rgba(#e33a67, 1),
+            rgba(#ea003f, 1)
+          );
+          top: -100px;
+          left: -15px;
+        }
+        .icon > svg {
+          color: #5980d8;
         }
       }
     }
   }
-  
+}
